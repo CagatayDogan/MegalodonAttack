@@ -1,14 +1,14 @@
 fileFormatVersion: 2
-guid: 31bb3bc87734c46299e164e04fd06f69
-timeCreated: 1525549198
+guid: c095b049aa8ac8d4e9347d7d284e16a2
+timeCreated: 1525613965
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: diver 0
-    21300002: diver 1
-    21300004: diver 2
-    21300006: diver 3
-    21300008: diver 4
+    21300000: puffer_Fish_new 1 0
+    21300002: puffer_Fish_new 1 1
+    21300004: puffer_Fish_new 1 2
+    21300006: puffer_Fish_new 1 3
+    21300008: puffer_Fish_new 1 4
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -75,71 +75,71 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: diver 0
+      name: puffer_Fish_new 1 0
       rect:
         serializedVersion: 2
         x: 0
         y: 64
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: diver 1
+      name: puffer_Fish_new 1 1
       rect:
         serializedVersion: 2
         x: 64
         y: 64
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: diver 2
+      name: puffer_Fish_new 1 2
       rect:
         serializedVersion: 2
         x: 128
         y: 64
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: diver 3
+      name: puffer_Fish_new 1 3
       rect:
         serializedVersion: 2
         x: 192
         y: 64
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: diver 4
+      name: puffer_Fish_new 1 4
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

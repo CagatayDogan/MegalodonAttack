@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyController : MonoBehaviour {
+public class OxygenController : MonoBehaviour {
 
     public float moveSpeed;
 
@@ -21,10 +21,8 @@ public class EnemyController : MonoBehaviour {
     {
         if (collision.name == "diver 0")
         {
-            Debug.Log("Balık Dokundu");
-            HealthBarScript.health -= 1;
-        }        
-        //oxygen scriptinde bunu kullanıcaksın o yüzden commente aldın!
-        //OxygenBarScript.oxygen -= 10f;
+            Debug.Log("Oksijen Dokundu");
+            OxygenBarScript.oxygen += 25f;
+        }
     }
 }
