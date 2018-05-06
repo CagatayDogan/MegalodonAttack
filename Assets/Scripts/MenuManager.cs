@@ -9,6 +9,8 @@ public class MenuManager : MonoBehaviour {
 
 	private static MenuManager _instance;
 
+	public GameObject startPanel;
+
 	public static MenuManager Instance
 	{
 
@@ -36,20 +38,20 @@ public class MenuManager : MonoBehaviour {
 
 	}
 
+	void Start()
+	{
+		if (startPanel.gameObject.activeSelf == true) 
+		{
+			Time.timeScale = 0;
+		}
+	}
+
 	public void StartButton()
 	{
 		Debug.Log ("Start Button called");
-
+		startPanel.gameObject.SetActive (false);
+		Time.timeScale = 1;
 
 	}
-
-	// Use this for initialization
-	void Start () {
 		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }
