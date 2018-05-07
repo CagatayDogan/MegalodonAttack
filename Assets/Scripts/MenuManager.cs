@@ -11,6 +11,20 @@ public class MenuManager : MonoBehaviour {
 
 	public GameObject startPanel;
 
+	public GameObject pausePanel;
+
+	public GameObject sunkedShip;
+
+	public GameObject diver;
+
+	public GameObject bubbles;
+
+	public GameObject healthBar;
+
+	public GameObject scoreText;
+
+	public GameObject pauseButton;
+
 	public static MenuManager Instance
 	{
 
@@ -43,6 +57,11 @@ public class MenuManager : MonoBehaviour {
 		if (startPanel.gameObject.activeSelf == true) 
 		{
 			Time.timeScale = 0;
+			diver.gameObject.SetActive (false);
+			healthBar.gameObject.SetActive (false);
+			scoreText.gameObject.SetActive (false);
+			pauseButton.gameObject.SetActive (false);
+			pausePanel.gameObject.SetActive (false);
 		}
 	}
 
@@ -50,8 +69,30 @@ public class MenuManager : MonoBehaviour {
 	{
 		Debug.Log ("Start Button called");
 		startPanel.gameObject.SetActive (false);
+		sunkedShip.gameObject.SetActive (false);
+		bubbles.gameObject.SetActive (false);
+		diver.gameObject.SetActive (true);
+		healthBar.gameObject.SetActive (true);
+		scoreText.gameObject.SetActive (true);
+		pauseButton.gameObject.SetActive (true);
 		Time.timeScale = 1;
 
+	}
+
+	public void PauseButton()
+	{
+		Debug.Log ("Pause Button called.");
+		Time.timeScale = 0;
+		pauseButton.gameObject.SetActive (false);
+		pausePanel.gameObject.SetActive (true);
+	}
+
+	public void ResumeButon()
+	{
+		Debug.Log ("Resume Button called.");
+		pausePanel.gameObject.SetActive (false);
+		pauseButton.gameObject.SetActive (true);
+		Time.timeScale = 1;
 	}
 		
 }

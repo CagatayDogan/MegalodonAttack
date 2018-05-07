@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 50496125900462968}
   - component: {fileID: 61154504823351392}
   - component: {fileID: 114790559285708304}
+  - component: {fileID: 95507467591107708}
   m_Layer: 0
   m_Name: PufferFish
   m_TagString: Untagged
@@ -53,7 +54,7 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
+  m_UseAutoMass: 1
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
@@ -62,7 +63,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 3
 --- !u!61 &61154504823351392
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -88,6 +89,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.57048094, y: 0.4089046}
   m_EdgeRadius: 0
+--- !u!95 &95507467591107708
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1944976792895030}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 93481a5087c147245a5a14a05e9037fe, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114790559285708304
 MonoBehaviour:
   m_ObjectHideFlags: 1

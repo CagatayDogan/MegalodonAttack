@@ -22,6 +22,7 @@ public class OxygenController : MonoBehaviour {
         if (collision.name == "diver 0")
         {
             Debug.Log("Oksijen Dokundu");
+			this.gameObject.SetActive (false);
             OxygenBarScript.oxygen += 25f;
         }
     }

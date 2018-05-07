@@ -8,5 +8,15 @@ public class ButtonCaller : MonoBehaviour {
 	{
 		MenuManager.Instance.StartButton ();
 	}
+
+	public void PauseButtonCaller()
+	{
+		MenuManager.Instance.PauseButton ();
+	}
+
+	public void ResumeButtonCaller()
+	{
+		MenuManager.Instance.ResumeButon ();
+	}
 		
 }
