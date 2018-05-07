@@ -21,6 +21,7 @@ public class HealthBarScript : MonoBehaviour {
         if (health > 3)
         {
             health = 3;
+            PlayerController.myHealth = 3;
         }
 
         switch (health)

@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 50693589923027684}
   - component: {fileID: 61975907623329294}
   - component: {fileID: 114246516234900768}
+  - component: {fileID: 95515931906581392}
   m_Layer: 0
   m_Name: Heart
   m_TagString: Untagged
@@ -88,6 +89,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.18253033, y: 0.17229402}
   m_EdgeRadius: 0
+--- !u!95 &95515931906581392
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1552460318428524}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 07941a4c09c37a443a0fcd870a739b8a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114246516234900768
 MonoBehaviour:
   m_ObjectHideFlags: 1

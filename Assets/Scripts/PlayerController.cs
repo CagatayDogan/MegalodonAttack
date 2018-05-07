@@ -6,12 +6,17 @@ public class PlayerController : MonoBehaviour {
 
     public float moveSpeed;
 
+    Animator animator;
+    public static int myHealth;
+
     private Rigidbody2D myRigidBody;
 
 	// Use this for initialization
 	void Start () {
         myRigidBody = GetComponent<Rigidbody2D>();
-	}
+        animator = GetComponent<Animator>();
+        myHealth = HealthBarScript.health;
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -38,6 +43,19 @@ public class PlayerController : MonoBehaviour {
         pos.y = Mathf.Clamp01(pos.y);
         transform.position = Camera.main.ViewportToWorldPoint(pos);
 
-
+        if(HealthBarScript.health > myHealth)
+        {
+            myHealth = HealthBarScript.health;
+        }
+        else if (HealthBarScript.health < myHealth)
+        {
+            playHit();
+            myHealth = HealthBarScript.health;
+            Invoke("playHit", 1);
+        }
+    }
+    void playHit()
+    {
+        animator.SetTrigger("hitDiver");
     }
 }

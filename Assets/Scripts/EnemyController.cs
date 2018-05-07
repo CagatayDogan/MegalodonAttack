@@ -5,11 +5,12 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour {
 
     public float moveSpeed;
+    Animator animator;
 
     // Use this for initialization
     void Start () {
-		
-	}
+        animator = GetComponent<Animator>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -23,6 +24,7 @@ public class EnemyController : MonoBehaviour {
         {
             Debug.Log("Balık Dokundu");
             HealthBarScript.health -= 1;
+            animator.SetTrigger("hit");
         }        
         //oxygen scriptinde bunu kullanıcaksın o yüzden commente aldın!
         //OxygenBarScript.oxygen -= 10f;
