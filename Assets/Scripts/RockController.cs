@@ -5,11 +5,12 @@ using UnityEngine;
 public class RockController : MonoBehaviour {
 
     public float moveSpeed;
+	Animator animator;
 
     // Use this for initialization
     void Start()
     {
-
+		animator = GetComponent<Animator> ();
     }
 
     // Update is called once per frame
@@ -25,6 +26,7 @@ public class RockController : MonoBehaviour {
         {
             Debug.Log("Taş Dokundu");
             HealthBarScript.health -= 1;
+			animator.SetTrigger ("hitRock");
         }
     }
 }

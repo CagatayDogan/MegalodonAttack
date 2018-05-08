@@ -5,10 +5,11 @@ using UnityEngine;
 public class OxygenController : MonoBehaviour {
 
     public float moveSpeed;
+	Animator animator;
 
     // Use this for initialization
     void Start () {
-		
+		animator = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -22,8 +23,8 @@ public class OxygenController : MonoBehaviour {
         if (collision.name == "diver 0")
         {
             Debug.Log("Oksijen Dokundu");
-			this.gameObject.SetActive (false);
             OxygenBarScript.oxygen += 25f;
+			animator.SetTrigger("hitOxygen");
         }
     }
 }

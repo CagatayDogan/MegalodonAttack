@@ -25,6 +25,8 @@ public class MenuManager : MonoBehaviour {
 
 	public GameObject pauseButton;
 
+	public GameObject oxygenBar;
+
 	public static MenuManager Instance
 	{
 
@@ -62,7 +64,9 @@ public class MenuManager : MonoBehaviour {
 			scoreText.gameObject.SetActive (false);
 			pauseButton.gameObject.SetActive (false);
 			pausePanel.gameObject.SetActive (false);
+			oxygenBar.gameObject.SetActive (false);
 		}
+
 	}
 
 	public void StartButton()
@@ -75,6 +79,7 @@ public class MenuManager : MonoBehaviour {
 		healthBar.gameObject.SetActive (true);
 		scoreText.gameObject.SetActive (true);
 		pauseButton.gameObject.SetActive (true);
+		oxygenBar.gameObject.SetActive (true);
 		Time.timeScale = 1;
 
 	}
