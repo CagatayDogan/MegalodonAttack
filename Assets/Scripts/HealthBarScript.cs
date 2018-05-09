@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class HealthBarScript : MonoBehaviour {
 
-    public GameObject heart1, heart2, heart3, gameOver;
+    public GameObject heart1, heart2, heart3, gameOver, gameOverPanel;
+	public AudioClip ingameMusic;
     public static int health;
 
 	// Use this for initialization
@@ -41,11 +42,13 @@ public class HealthBarScript : MonoBehaviour {
                 heart2.gameObject.SetActive(false);
                 heart3.gameObject.SetActive(false);
                 break;
-            case 0:
-                heart1.gameObject.SetActive(false);
-                heart2.gameObject.SetActive(false);
-                heart3.gameObject.SetActive(false);
-                gameOver.gameObject.SetActive(true);
+			case 0:
+				heart1.gameObject.SetActive (false);
+				heart2.gameObject.SetActive (false);
+				heart3.gameObject.SetActive (false);
+				gameOver.gameObject.SetActive (true);
+				gameOverPanel.gameObject.SetActive (true);
+				SoundManager.instance.PauseSingle(ingameMusic);
                 Time.timeScale = 0;
                 break;
         }

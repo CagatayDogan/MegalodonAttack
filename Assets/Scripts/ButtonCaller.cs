@@ -19,4 +19,13 @@ public class ButtonCaller : MonoBehaviour {
 		MenuManager.Instance.ResumeButon ();
 	}
 		
+	public void RestartButtonCaller()
+	{
+		MenuManager.Instance.RestartButton ();
+	}
+
+	public void MusicButtonCaller()
+	{
+		MenuManager.Instance.MusicButton ();
+	}
 }

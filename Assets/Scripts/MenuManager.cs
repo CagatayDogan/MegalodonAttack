@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour {
 
@@ -9,23 +10,15 @@ public class MenuManager : MonoBehaviour {
 
 	private static MenuManager _instance;
 
-	public GameObject startPanel;
+	public GameObject startPanel, pausePanel, gameOverPanel;
 
-	public GameObject pausePanel;
+	public GameObject sunkedShip, diver, bubbles;
 
-	public GameObject sunkedShip;
-
-	public GameObject diver;
-
-	public GameObject bubbles;
-
-	public GameObject healthBar;
+	public GameObject healthBar, oxygenBar;
 
 	public GameObject scoreText;
 
-	public GameObject pauseButton;
-
-	public GameObject oxygenBar;
+	public GameObject pauseButton, musicButton;
 
     public AudioClip menuMusic,ingameMusic;
 
@@ -65,7 +58,9 @@ public class MenuManager : MonoBehaviour {
 			healthBar.gameObject.SetActive (false);
 			scoreText.gameObject.SetActive (false);
 			pauseButton.gameObject.SetActive (false);
+			musicButton.gameObject.SetActive (false);
 			pausePanel.gameObject.SetActive (false);
+			gameOverPanel.gameObject.SetActive (false);
 			oxygenBar.gameObject.SetActive (false);
             SoundManager.instance.PlaySingle(menuMusic);
         }
@@ -82,6 +77,7 @@ public class MenuManager : MonoBehaviour {
 		healthBar.gameObject.SetActive (true);
 		scoreText.gameObject.SetActive (true);
 		pauseButton.gameObject.SetActive (true);
+		musicButton.gameObject.SetActive (true);
 		oxygenBar.gameObject.SetActive (true);
 		Time.timeScale = 1;
         SoundManager.instance.PlaySingle(ingameMusic);
@@ -93,6 +89,7 @@ public class MenuManager : MonoBehaviour {
 		Debug.Log ("Pause Button called.");
 		Time.timeScale = 0;
 		pauseButton.gameObject.SetActive (false);
+		musicButton.gameObject.SetActive (false);
 		pausePanel.gameObject.SetActive (true);
         SoundManager.instance.PauseSingle(ingameMusic);
     }
@@ -102,8 +99,27 @@ public class MenuManager : MonoBehaviour {
 		Debug.Log ("Resume Button called.");
 		pausePanel.gameObject.SetActive (false);
 		pauseButton.gameObject.SetActive (true);
+		musicButton.gameObject.SetActive (true);
 		Time.timeScale = 1;
         SoundManager.instance.PlaySingle(ingameMusic);
     }
+
+	public void RestartButton()
+	{
+		SceneManager.LoadScene (SceneManager.GetActiveScene ().name);
+		StartButton ();
+	}
+
+	public void MusicButton()
+	{
+		if (SoundManager.instance.isMusicOn) 
+		{
+			SoundManager.instance.PauseSingle (ingameMusic);
+		}
+		else
+		{
+			SoundManager.instance.PlaySingle (ingameMusic);
+		}
+	}
 		
 }

@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class OxygenBarScript : MonoBehaviour {
 
     Image oxygenBar;
-    public GameObject gameOver;
+    public GameObject gameOver, gameOverPanel;
+	public AudioClip ingameMusic;
     float maxOxygen = 100f;
     public static float oxygen;
 
@@ -23,6 +24,8 @@ public class OxygenBarScript : MonoBehaviour {
         if (oxygen < 0)
         {
             gameOver.gameObject.SetActive(true);
+			gameOverPanel.gameObject.SetActive (true);
+			SoundManager.instance.PauseSingle(ingameMusic);
             Time.timeScale = 0;
         }
         else if (oxygen > 100f)

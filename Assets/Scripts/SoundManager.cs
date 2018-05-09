@@ -9,7 +9,7 @@ public class SoundManager : MonoBehaviour {
     public static SoundManager instance = null;     //Allows other scripts to call functions from SoundManager.             
     public float lowPitchRange = .95f;              //The lowest a sound effect will be randomly pitched.
     public float highPitchRange = 1.05f;            //The highest a sound effect will be randomly pitched.
-
+	public bool isMusicOn, isSoundOn;
 
     void Awake()
     {
@@ -30,6 +30,7 @@ public class SoundManager : MonoBehaviour {
     {
         musicSource.clip = clip;
         musicSource.Pause();
+		isMusicOn = false;
     }
 
 
@@ -41,6 +42,8 @@ public class SoundManager : MonoBehaviour {
 
         //Play the clip.
         musicSource.Play();
+
+		isMusicOn = true;
     }
 
 
