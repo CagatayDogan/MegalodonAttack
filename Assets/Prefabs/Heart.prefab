@@ -118,6 +118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
+  healSound: {fileID: 8300000, guid: 8c51804edcfae584fb5c6ce0b2c3094c, type: 3}
 --- !u!212 &212621956824509364
 SpriteRenderer:
   m_ObjectHideFlags: 1

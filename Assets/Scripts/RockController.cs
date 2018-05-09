@@ -6,6 +6,7 @@ public class RockController : MonoBehaviour {
 
     public float moveSpeed;
 	Animator animator;
+    public AudioClip hitSound;
 
     // Use this for initialization
     void Start()
@@ -27,6 +28,11 @@ public class RockController : MonoBehaviour {
             Debug.Log("Taş Dokundu");
             HealthBarScript.health -= 1;
 			animator.SetTrigger ("hitRock");
+            SoundManager.instance.RandomizeSfx(hitSound);
+        }
+        else
+        {
+            Destroy(gameObject);
         }
     }
 }

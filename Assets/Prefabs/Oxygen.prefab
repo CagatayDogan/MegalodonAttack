@@ -118,6 +118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
+  airSound: {fileID: 8300000, guid: 6aa8fd96ada7feb4490d6e5593048d6b, type: 3}
 --- !u!212 &212056660625095758
 SpriteRenderer:
   m_ObjectHideFlags: 1

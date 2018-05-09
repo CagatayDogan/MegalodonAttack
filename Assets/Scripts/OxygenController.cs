@@ -6,6 +6,7 @@ public class OxygenController : MonoBehaviour {
 
     public float moveSpeed;
 	Animator animator;
+    public AudioClip airSound;
 
     // Use this for initialization
     void Start () {
@@ -25,6 +26,11 @@ public class OxygenController : MonoBehaviour {
             Debug.Log("Oksijen Dokundu");
             OxygenBarScript.oxygen += 25f;
 			animator.SetTrigger("hitOxygen");
+            SoundManager.instance.RandomizeSfx(airSound);
+        }
+        else
+        {
+            Destroy(gameObject);
         }
     }
 }

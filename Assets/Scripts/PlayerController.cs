@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
+    private Rigidbody2D myRigidBody;
+
     public float moveSpeed;
 
     Animator animator;
     public static int myHealth;
 
-    private Rigidbody2D myRigidBody;
-
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         myRigidBody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         myHealth = HealthBarScript.health;
@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-       // myRigidBody.velocity = new Vector2(escapeSpeed, myRigidBody.velocity.y);
+        //myRigidBody.velocity = new Vector2(escapeSpeed, myRigidBody.velocity.y);
 
         if (Input.GetKey(KeyCode.UpArrow))
         {

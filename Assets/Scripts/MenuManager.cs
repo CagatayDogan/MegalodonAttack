@@ -27,6 +27,8 @@ public class MenuManager : MonoBehaviour {
 
 	public GameObject oxygenBar;
 
+    public AudioClip menuMusic,ingameMusic;
+
 	public static MenuManager Instance
 	{
 
@@ -65,7 +67,8 @@ public class MenuManager : MonoBehaviour {
 			pauseButton.gameObject.SetActive (false);
 			pausePanel.gameObject.SetActive (false);
 			oxygenBar.gameObject.SetActive (false);
-		}
+            SoundManager.instance.PlaySingle(menuMusic);
+        }
 
 	}
 
@@ -81,8 +84,9 @@ public class MenuManager : MonoBehaviour {
 		pauseButton.gameObject.SetActive (true);
 		oxygenBar.gameObject.SetActive (true);
 		Time.timeScale = 1;
+        SoundManager.instance.PlaySingle(ingameMusic);
 
-	}
+    }
 
 	public void PauseButton()
 	{
@@ -90,7 +94,8 @@ public class MenuManager : MonoBehaviour {
 		Time.timeScale = 0;
 		pauseButton.gameObject.SetActive (false);
 		pausePanel.gameObject.SetActive (true);
-	}
+        SoundManager.instance.PauseSingle(ingameMusic);
+    }
 
 	public void ResumeButon()
 	{
@@ -98,6 +103,7 @@ public class MenuManager : MonoBehaviour {
 		pausePanel.gameObject.SetActive (false);
 		pauseButton.gameObject.SetActive (true);
 		Time.timeScale = 1;
-	}
+        SoundManager.instance.PlaySingle(ingameMusic);
+    }
 		
 }

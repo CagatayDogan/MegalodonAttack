@@ -6,6 +6,7 @@ public class HeartController : MonoBehaviour {
 
     public float moveSpeed;
     Animator animator;
+    public AudioClip healSound;
 
     // Use this for initialization
     void Start()
@@ -27,6 +28,11 @@ public class HeartController : MonoBehaviour {
             Debug.Log("Kalp Dokundu");
             HealthBarScript.health += 1;
             animator.SetTrigger("hitHeart");
+            SoundManager.instance.RandomizeSfx(healSound);
+        }
+        else
+        {
+            Destroy(gameObject);
         }
     }
 }

@@ -6,6 +6,7 @@ public class EnemyController : MonoBehaviour {
 
     public float moveSpeed;
     Animator animator;
+    public AudioClip hitSound;
 
     // Use this for initialization
     void Start () {
@@ -25,7 +26,12 @@ public class EnemyController : MonoBehaviour {
             Debug.Log("Balık Dokundu");
             HealthBarScript.health -= 1;
             animator.SetTrigger("hit");
-        }        
+            SoundManager.instance.RandomizeSfx(hitSound);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
         //oxygen scriptinde bunu kullanıcaksın o yüzden commente aldın!
         //OxygenBarScript.oxygen -= 10f;
     }
