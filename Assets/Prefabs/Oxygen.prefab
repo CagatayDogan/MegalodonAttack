@@ -119,6 +119,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 10
   airSound: {fileID: 8300000, guid: 6aa8fd96ada7feb4490d6e5593048d6b, type: 3}
+  megalodon: {fileID: 1173744799218130, guid: 28276e559520982428c530772884fe83, type: 2}
 --- !u!212 &212056660625095758
 SpriteRenderer:
   m_ObjectHideFlags: 1

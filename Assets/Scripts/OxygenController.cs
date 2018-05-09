@@ -7,6 +7,7 @@ public class OxygenController : MonoBehaviour {
     public float moveSpeed;
 	Animator animator;
     public AudioClip airSound;
+    public GameObject megalodon;
 
     // Use this for initialization
     void Start () {
@@ -28,7 +29,11 @@ public class OxygenController : MonoBehaviour {
 			animator.SetTrigger("hitOxygen");
             SoundManager.instance.RandomizeSfx(airSound);
         }
-        else
+        else if (collision.name == "Megalodon")
+        {
+            Physics.IgnoreCollision(megalodon.GetComponent<Collider>(), GetComponent<Collider>());
+        }
+        else 
         {
             Destroy(gameObject);
         }

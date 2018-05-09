@@ -20,6 +20,8 @@ public class MenuManager : MonoBehaviour {
 
 	public GameObject pauseButton, musicButton;
 
+    public GameObject megalodon;
+
     public AudioClip menuMusic,ingameMusic;
 
 	public static MenuManager Instance
@@ -62,6 +64,7 @@ public class MenuManager : MonoBehaviour {
 			pausePanel.gameObject.SetActive (false);
 			gameOverPanel.gameObject.SetActive (false);
 			oxygenBar.gameObject.SetActive (false);
+            megalodon.gameObject.SetActive(false);
             SoundManager.instance.PlaySingle(menuMusic);
         }
 
@@ -79,6 +82,7 @@ public class MenuManager : MonoBehaviour {
 		pauseButton.gameObject.SetActive (true);
 		musicButton.gameObject.SetActive (true);
 		oxygenBar.gameObject.SetActive (true);
+        megalodon.gameObject.SetActive(true);
 		Time.timeScale = 1;
         SoundManager.instance.PlaySingle(ingameMusic);
 

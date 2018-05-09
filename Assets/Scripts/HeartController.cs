@@ -7,6 +7,7 @@ public class HeartController : MonoBehaviour {
     public float moveSpeed;
     Animator animator;
     public AudioClip healSound;
+    public GameObject megalodon;
 
     // Use this for initialization
     void Start()
@@ -29,6 +30,10 @@ public class HeartController : MonoBehaviour {
             HealthBarScript.health += 1;
             animator.SetTrigger("hitHeart");
             SoundManager.instance.RandomizeSfx(healSound);
+        }
+        else if (collision.name == "Megalodon")
+        {
+            Physics.IgnoreCollision(megalodon.GetComponent<Collider>(), GetComponent<Collider>());
         }
         else
         {

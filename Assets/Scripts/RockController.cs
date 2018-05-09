@@ -7,6 +7,7 @@ public class RockController : MonoBehaviour {
     public float moveSpeed;
 	Animator animator;
     public AudioClip hitSound;
+    public GameObject megalodon;
 
     // Use this for initialization
     void Start()
@@ -29,6 +30,10 @@ public class RockController : MonoBehaviour {
             HealthBarScript.health -= 1;
 			animator.SetTrigger ("hitRock");
             SoundManager.instance.RandomizeSfx(hitSound);
+        }
+        else if (collision.name == "Megalodon")
+        {
+            Physics.IgnoreCollision(megalodon.GetComponent<Collider>(), GetComponent<Collider>());
         }
         else
         {

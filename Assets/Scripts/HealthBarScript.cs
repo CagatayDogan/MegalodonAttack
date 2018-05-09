@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HealthBarScript : MonoBehaviour {
 
-    public GameObject heart1, heart2, heart3, gameOver, gameOverPanel;
+    public GameObject heart1, heart2, heart3, gameOver, gameOverPanel,diver;
 	public AudioClip ingameMusic;
     public static int health;
 
@@ -50,6 +50,7 @@ public class HealthBarScript : MonoBehaviour {
 				gameOverPanel.gameObject.SetActive (true);
 				SoundManager.instance.PauseSingle(ingameMusic);
                 Time.timeScale = 0;
+                diver.gameObject.SetActive(false);
                 break;
         }
 	}

@@ -7,6 +7,7 @@ public class EnemyController : MonoBehaviour {
     public float moveSpeed;
     Animator animator;
     public AudioClip hitSound;
+    public GameObject megalodon;
 
     // Use this for initialization
     void Start () {
@@ -27,6 +28,10 @@ public class EnemyController : MonoBehaviour {
             HealthBarScript.health -= 1;
             animator.SetTrigger("hit");
             SoundManager.instance.RandomizeSfx(hitSound);
+        }
+        else if (collision.name == "Megalodon")
+        {
+            Physics.IgnoreCollision(megalodon.GetComponent<Collider>(), GetComponent<Collider>());
         }
         else
         {

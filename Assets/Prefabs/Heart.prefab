@@ -119,6 +119,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 10
   healSound: {fileID: 8300000, guid: 8c51804edcfae584fb5c6ce0b2c3094c, type: 3}
+  megalodon: {fileID: 1173744799218130, guid: 28276e559520982428c530772884fe83, type: 2}
 --- !u!212 &212621956824509364
 SpriteRenderer:
   m_ObjectHideFlags: 1
