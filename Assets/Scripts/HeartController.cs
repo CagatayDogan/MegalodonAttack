@@ -33,7 +33,7 @@ public class HeartController : MonoBehaviour {
         }
         else if (collision.name == "Megalodon")
         {
-            Physics.IgnoreCollision(megalodon.GetComponent<Collider>(), GetComponent<Collider>());
+			Physics.IgnoreCollision(megalodon.GetComponent<Collider>(), GetComponent<Collider>());
         }
         else
         {
