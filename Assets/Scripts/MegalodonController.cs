@@ -9,7 +9,7 @@ public class MegalodonController : MonoBehaviour {
     BoxCollider2D boxCol;
     public AudioClip eatSound;
 
-    float randomTime,newTime;
+    public static float randomTime,newTime;
 
     public Transform startMarker;
     public Transform endMarker;
@@ -17,8 +17,7 @@ public class MegalodonController : MonoBehaviour {
     // Use this for initialization
     void Start () {
         animator = GetComponent<Animator>();
-        boxCol = GetComponent<BoxCollider2D>();
-        newTime = Random.Range(5, 10);
+        boxCol = GetComponent<BoxCollider2D>();  
     }
 	
 	// Update is called once per frame
@@ -34,7 +33,7 @@ public class MegalodonController : MonoBehaviour {
         if (Time.time > newTime)
         {
             randomTime = Random.Range(5, 10);
-            newTime = Time.unscaledTime + randomTime;
+            newTime = Time.time + randomTime;
             Debug.Log("Isırık zamanı! =" + newTime);
             attack();
         }

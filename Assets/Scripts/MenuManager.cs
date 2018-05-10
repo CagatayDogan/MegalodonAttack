@@ -66,6 +66,7 @@ public class MenuManager : MonoBehaviour {
 			oxygenBar.gameObject.SetActive (false);
             megalodon.gameObject.SetActive(false);
             SoundManager.instance.PlaySingle(menuMusic);
+			MegalodonController.newTime = Random.Range(5, 10) + Time.time;
         }
 
 	}
@@ -111,7 +112,6 @@ public class MenuManager : MonoBehaviour {
 	public void RestartButton()
 	{
 		SceneManager.LoadScene (SceneManager.GetActiveScene ().name);
-		StartButton ();
 	}
 
 	public void MusicButton()

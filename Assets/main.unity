@@ -1848,7 +1848,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Megaladon Attack
+  m_Text: Megalodon Attack
 --- !u!222 &995653422
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2533,7 +2533,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Restart
+  m_Text: Main Menu
 --- !u!222 &1370195999
 CanvasRenderer:
   m_ObjectHideFlags: 0
